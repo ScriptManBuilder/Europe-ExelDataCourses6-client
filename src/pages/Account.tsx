@@ -84,19 +84,11 @@ const Account: React.FC = () => {
     };
   }, [activeTab]);
 
-  // Данные курсов копирайтинга из products.ts
+  // Данные курсов из products.ts
   const testAccountCourses = products.map(product => {
-    const courseVideos = [];
-    
-    // Добавляем основное видео превью
-    if (product.video) {
-      courseVideos.push(product.video);
-    }
-    
-    // Добавляем дополнительные видео для премиум курсов
-    if (product.videos) {
-      courseVideos.push(...product.videos);
-    }
+    // Используем только полные 5-минутные видео из videos array
+    // Не используем video (10-секундное превью), чтобы избежать дублирования
+    const courseVideos = product.videos || [];
     
     return {
       id: product.id,
