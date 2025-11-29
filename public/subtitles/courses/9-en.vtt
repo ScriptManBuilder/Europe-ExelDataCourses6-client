@@ -2,7 +2,67 @@ WEBVTT
 
 1
 00:00:01.000 --> 00:00:05.000
-If there's one skill that can transform your online worth and value
+Gauge charts, also known as speedometer charts, are perfect for
+
+2
+00:00:05.000 --> 00:00:08.000
+showing progress toward a goal or displaying KPIs in an intuitive,
+
+3
+00:00:08.000 --> 00:00:12.000
+visually appealing way. We'll build these using doughnut charts
+
+4
+00:00:12.000 --> 00:00:16.000
+combined with smart formatting tricks. Start by setting up your
+
+5
+00:00:16.000 --> 00:00:20.000
+data with three components: the actual value, the remaining value
+
+6
+00:00:20.000 --> 00:00:24.000
+to reach your goal, and a spacer that creates the bottom half of
+
+7
+00:00:24.000 --> 00:00:28.000
+the gauge. Insert a doughnut chart and format each series carefully.
+
+8
+00:00:28.000 --> 00:00:32.000
+The actual value gets a bold color gradient, the remaining portion
+
+9
+00:00:32.000 --> 00:00:36.000
+a light gray, and the spacer is made completely transparent. Rotate
+
+10
+00:00:36.000 --> 00:00:40.000
+the chart to orient it properly. Add a text box in the center to
+
+11
+00:00:40.000 --> 00:00:44.000
+display the percentage or actual value using linked cell formulas.
+
+12
+00:00:44.000 --> 00:00:48.000
+You can enhance this with conditional formatting to change colors
+
+13
+00:00:48.000 --> 00:00:52.000
+based on performance thresholds: red for below target, yellow for
+
+14
+00:00:52.000 --> 00:00:56.000
+approaching goal, green for achieved. Add needle pointers or markers
+
+15
+00:00:56.000 --> 00:01:00.000
+for additional visual interest. These gauge charts are excellent for
+
+16
+00:01:00.000 --> 00:01:04.000
+executive dashboards and real-time performance monitoring displays. worth and value
 
 2
 00:00:05.000 --> 00:00:08.000

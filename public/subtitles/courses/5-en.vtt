@@ -2,11 +2,71 @@ WEBVTT
 
 1
 00:00:01.000 --> 00:00:05.000
-If there's one skill that can transform your online worth and value
+Now let's create interactive scroll and zoom controls that allow
 
 2
 00:00:05.000 --> 00:00:08.000
-as a freelancer or entrepreneur? It's got to be copywriting.
+users to dynamically explore large datasets in your charts.
+
+3
+00:00:08.000 --> 00:00:12.000
+This is perfect when you have hundreds or thousands of data points
+
+4
+00:00:12.000 --> 00:00:16.000
+but only want to display a specific window at a time. We'll use
+
+5
+00:00:16.000 --> 00:00:20.000
+scroll bars and spin buttons combined with dynamic formulas
+
+6
+00:00:20.000 --> 00:00:24.000
+to control which portion of your data is visible. First, insert
+
+7
+00:00:24.000 --> 00:00:28.000
+form controls from the Developer tab. Add a scroll bar for
+
+8
+00:00:28.000 --> 00:00:32.000
+horizontal navigation and spin buttons for zoom level control.
+
+9
+00:00:32.000 --> 00:00:36.000
+Link these controls to cells that will drive your chart's data
+
+10
+00:00:36.000 --> 00:00:40.000
+range. Use INDEX and OFFSET functions to create dynamic ranges
+
+11
+00:00:40.000 --> 00:00:44.000
+that respond to your control values. As users interact with
+
+12
+00:00:44.000 --> 00:00:48.000
+the scroll bar, the chart pans left and right through your data.
+
+13
+00:00:48.000 --> 00:00:52.000
+The zoom controls adjust how many data points are displayed
+
+14
+00:00:52.000 --> 00:00:56.000
+at once. This creates an interactive experience similar to
+
+15
+00:00:56.000 --> 00:01:00.000
+professional business intelligence tools, all within Excel.
+
+16
+00:01:00.000 --> 00:01:04.000
+Your stakeholders can explore the data themselves, focusing on
+
+17
+00:01:04.000 --> 00:01:08.000
+the time periods or data ranges that matter most to them.
 
 3
 00:00:08.000 --> 00:00:12.000

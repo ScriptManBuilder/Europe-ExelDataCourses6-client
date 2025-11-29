@@ -2,11 +2,75 @@ WEBVTT
 
 1
 00:00:01.000 --> 00:00:05.000
-If there's one skill that can transform your online value
+In this demo, we'll explore adding binary values to highlight
 
 2
 00:00:05.000 --> 00:00:08.000
-as a freelancer or entrepreneur, it's copywriting.
+specific date ranges within your charts. Head to the Binary Date
+
+3
+00:00:08.000 --> 00:00:12.000
+Ranges tab in your workbook. Here we have daily revenue data
+
+4
+00:00:12.000 --> 00:00:16.000
+and certain dates are highlighted in light green. These represent
+
+5
+00:00:16.000 --> 00:00:20.000
+promotional or sale periods. We want to showcase these special
+
+6
+00:00:20.000 --> 00:00:24.000
+date ranges directly in our visualization. First, let's create
+
+7
+00:00:24.000 --> 00:00:28.000
+a basic line chart from our data. Then add a new column called
+
+8
+00:00:28.000 --> 00:00:32.000
+Promo with a default value of zero. Now replace zero with one
+
+9
+00:00:32.000 --> 00:00:36.000
+for dates that fall within promotional periods. This creates
+
+10
+00:00:36.000 --> 00:00:40.000
+a binary series: zero for regular dates, one for promo dates.
+
+11
+00:00:40.000 --> 00:00:44.000
+Add this series to your chart, then convert it to a combo chart
+
+12
+00:00:44.000 --> 00:00:48.000
+with 100% stacked columns on a secondary axis. Format the promo
+
+13
+00:00:48.000 --> 00:00:52.000
+series with a light fill and remove the gap width. This creates
+
+14
+00:00:52.000 --> 00:00:56.000
+vertical bands highlighting your promotional periods. Finally,
+
+15
+00:00:56.000 --> 00:01:00.000
+hide the secondary axis using custom formatting with three
+
+16
+00:01:00.000 --> 00:01:04.000
+semicolons. Now you have an elegant way to feature specific
+
+17
+00:01:04.000 --> 00:01:08.000
+date ranges within your Excel charts without overwhelming
+
+18
+00:01:08.000 --> 00:01:12.000
+the visualization with too much information.
 
 3
 00:00:08.000 --> 00:00:12.000

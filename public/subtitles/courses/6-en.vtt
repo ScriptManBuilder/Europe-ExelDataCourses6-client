@@ -2,7 +2,63 @@ WEBVTT
 
 1
 00:00:01.000 --> 00:00:05.000
-If there's one skill that can transform your online worth and value
+In this lesson, we'll create animated charts that change and evolve
+
+2
+00:00:05.000 --> 00:00:08.000
+over time, bringing your data presentations to life. Animated
+
+3
+00:00:08.000 --> 00:00:12.000
+visualizations are incredibly engaging and help tell data stories
+
+4
+00:00:12.000 --> 00:00:16.000
+more effectively than static charts. We'll use a combination of
+
+5
+00:00:16.000 --> 00:00:20.000
+formulas, named ranges, and VBA macros to create charts that
+
+6
+00:00:20.000 --> 00:00:24.000
+automatically update in sequence. First, set up your data with
+
+7
+00:00:24.000 --> 00:00:28.000
+time-based snapshots or progressive stages. Then create dynamic
+
+8
+00:00:28.000 --> 00:00:32.000
+named ranges that reference different portions of your data based
+
+9
+00:00:32.000 --> 00:00:36.000
+on a control cell. Add a simple VBA timer that increments this
+
+10
+00:00:36.000 --> 00:00:40.000
+control cell, causing your chart to automatically refresh and show
+
+11
+00:00:40.000 --> 00:00:44.000
+the next frame of data. You can control the animation speed,
+
+12
+00:00:44.000 --> 00:00:48.000
+add play and pause buttons, and even create looping animations.
+
+13
+00:00:48.000 --> 00:00:52.000
+This technique is perfect for presentations where you want to
+
+14
+00:00:52.000 --> 00:00:56.000
+show trends developing over time, compare changing values, or
+
+15
+00:00:56.000 --> 00:01:00.000
+simply make your dashboards more dynamic and attention-grabbing. worth and value
 
 2
 00:00:05.000 --> 00:00:08.000

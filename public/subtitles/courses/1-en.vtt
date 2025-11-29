@@ -2,128 +2,92 @@ WEBVTT
 
 1
 00:00:01.000 --> 00:00:05.000
-If there's one skill that can transform your online worth and value
+Welcome to Excel Data Visualization Part 2: Advanced Demos.
 
 2
 00:00:05.000 --> 00:00:08.000
-as a freelancer or entrepreneur? It's got to be copywriting.
+By now you're probably a master of just about every chart type
 
 3
 00:00:08.000 --> 00:00:12.000
-Yes, copywriting. But what exactly is copywriting?
+that Excel has to offer. So let's turn things up a notch.
 
 4
 00:00:12.000 --> 00:00:16.000
-Is it more of an art or a science? And what are the tools,
+In this section, we're going to dive into some really unique,
 
 5
 00:00:16.000 --> 00:00:20.000
-techniques, and formulas that you will need to know about
+advanced, next-level data visualization exercises.
 
 6
 00:00:20.000 --> 00:00:24.000
-in order to really start building momentum as a respected
+But before we do, let's take a minute to set some expectations.
 
 7
 00:00:24.000 --> 00:00:28.000
-in-demand copywriter. These are the questions that you often
+Number one: Advanced charts and graphs often require
 
 8
 00:00:28.000 --> 00:00:32.000
-hear being asked by those who are interested to pursue
+the use of advanced formulas and functions. At the end of the day,
 
 9
 00:00:32.000 --> 00:00:36.000
-copywriting as an exciting career change. And in this
+that's what makes them advanced. This isn't a formulas course,
 
 10
 00:00:36.000 --> 00:00:40.000
-no-nonsense, easy-to-follow masterclass, I'll show you
+you came here to learn data visualization. But formulas and functions
 
 11
 00:00:40.000 --> 00:00:44.000
-the exact strategies that I followed to be able to make
+are critical components to enable really cool functionality
 
 12
 00:00:44.000 --> 00:00:48.000
-huge strides within six months of starting out as a
+with advanced charts and graphs. During the demos, I'll talk about
 
 13
 00:00:48.000 --> 00:00:52.000
-freelance copywriter. Such accomplishments include becoming
+the formulas and give you quick summaries, but it won't be
 
 14
 00:00:52.000 --> 00:00:56.000
-the number one health and wellness copywriter on Google,
+a comprehensive review. Second: Some of these demos are easy,
 
 15
 00:00:56.000 --> 00:01:00.000
-being featured in a case study interview with top copywriter
+some might be hard. All I ask is that you proceed with an open mind
 
 16
 00:01:00.000 --> 00:01:04.000
-Jacob McMillan. And to get awesome feedback like this
+and trust me, you'll emerge as a data visualization wizard.
 
 17
 00:01:04.000 --> 00:01:08.000
-from none other than Craig Clemens, who's made over
+Last but not least, if you want to step up your formula game
 
 18
 00:01:08.000 --> 00:01:12.000
-$1 billion in sales thanks to the craft of copywriting.
+and learn more about functions like SUMIFS, INDEX MATCH, OFFSET,
 
 19
 00:01:12.000 --> 00:01:16.000
-But you may be thinking, what would I actually be learning
+COUNTA, array functions and more, consider taking
 
 20
 00:01:16.000 --> 00:01:20.000
-about in this course? Well, for a start, you'll get access
+an advanced Excel formulas course. With that said,
 
 21
 00:01:20.000 --> 00:01:24.000
-to over 60 lessons, each ranging from one to ten minutes
+let's go ahead and get started with our first demo.
 
 22
 00:01:24.000 --> 00:01:28.000
-to make them simpler, follow, memorable, and hopefully
+Get ready to create stunning, dynamic visualizations
 
 23
 00:01:28.000 --> 00:01:32.000
-motivational for you to go out and take action yourself.
-
-24
-00:01:32.000 --> 00:01:36.000
-The lessons will cover copywriting essentials, such as
-
-25
-00:01:36.000 --> 00:01:40.000
-how to write attention-grabbing headlines. The six pillars
-
-26
-00:01:40.000 --> 00:01:44.000
-of persuasion, psychological triggers, how to find your clients,
-
-27
-00:01:44.000 --> 00:01:48.000
-as well as copywriting productivity hacks, SEO best practices,
-
-28
-00:01:48.000 --> 00:01:52.000
-power words, career development, and five hot story structures
-
-29
-00:01:52.000 --> 00:01:56.000
-that you can use if you're ever out of ideas. So with all
-
-30
-00:01:56.000 --> 00:02:00.000
-that in mind, let me ask, are you ready to give this a go?
-
-31
-00:02:00.000 --> 00:02:04.000
-If you are, fantastic. Let's move on from this introduction
-
-32
-00:02:04.000 --> 00:02:08.000
-and get started with the first lesson. See you soon.
+that will transform how you present data in Excel.
