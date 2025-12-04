@@ -160,14 +160,80 @@ const RefundPolicy: React.FC = () => {
       </Section>
 
       <Section>
-        <SectionTitle>10. Contact Information</SectionTitle>
+        <SectionTitle>10. Subscription & Membership Cancellation Policy</SectionTitle>
+        <Paragraph>
+          <strong>Subscription Plans Overview:</strong>
+        </Paragraph>
+        <Paragraph>
+          We offer three subscription options to access our Excel Data Visualization courses:
+        </Paragraph>
+        <Paragraph>
+          • <strong>Monthly Subscription:</strong> {formatPrice(29.99)}/month - Billed monthly<br/>
+          • <strong>Annual Subscription:</strong> {formatPrice(299.99)}/year - Billed annually<br/>
+          • <strong>Lifetime Access:</strong> {formatPrice(599.99)} - One-time payment, no recurring charges
+        </Paragraph>
+        
+        <Paragraph>
+          <strong>Automatic Billing:</strong>
+        </Paragraph>
+        <Paragraph>
+          Your credit card will be billed <strong>on a monthly basis</strong> unless the membership is cancelled. 
+          Monthly subscriptions automatically renew on the same calendar day each month. Annual subscriptions 
+          renew yearly on your original purchase anniversary date. Lifetime access purchases are one-time 
+          payments with no recurring charges.
+        </Paragraph>
+        
+        <Paragraph>
+          <strong>Cancellation Timeframe:</strong>
+        </Paragraph>
+        <Paragraph>
+          You may cancel your subscription at any time through your account settings or by contacting customer support. 
+          To avoid being charged for the next billing cycle, you must cancel <strong>at least 24 hours before 
+          your next billing date</strong>. After cancellation, you will retain access to all course materials 
+          until the end of your current paid period.
+        </Paragraph>
+        
+        <Paragraph>
+          <strong>How to Cancel:</strong>
+        </Paragraph>
+        <Paragraph>
+          1. Log into your account at visual-courses.com<br/>
+          2. Navigate to Account Settings → Subscription Management<br/>
+          3. Click "Cancel Subscription" and confirm<br/>
+          4. You will receive a confirmation email within 24 hours<br/>
+          <br/>
+          Alternatively, contact support at support@photoshop-ecourses.com with your account email to request cancellation.
+        </Paragraph>
+        
+        <Paragraph>
+          <strong>Billing Statement Details:</strong>
+        </Paragraph>
+        <Paragraph>
+          All charges will appear as <strong>PHOTOSHOP.ECOURSES</strong> on your credit card or bank statement. 
+          Course access is provided immediately after successful payment. You will receive a detailed invoice 
+          via email for each transaction.
+        </Paragraph>
+        
+        <Paragraph>
+          <strong>Refunds on Subscriptions:</strong>
+        </Paragraph>
+        <Paragraph>
+          Monthly and annual subscription payments are eligible for refunds within the first 7 days of the 
+          initial purchase or renewal, provided less than 25% of course content has been accessed. Lifetime 
+          access purchases follow the standard 30-day refund policy outlined in this document. Partial refunds 
+          for unused subscription time are not available.
+        </Paragraph>
+      </Section>
+
+      <Section>
+        <SectionTitle>11. Contact Information</SectionTitle>
         <Paragraph>
           For refund requests or questions about this policy, please contact us:
         </Paragraph>
         <Paragraph>
    
           Company: {COMPANY_INFO.owner}<br/>
-          Email: {CONTACT_INFO.email}<br/>
+          Email: support@photoshop-ecourses.com<br/>
           Phone: {CONTACT_INFO.phoneFormatted}<br/>
           Address: {COMPANY_INFO.address}<br/>
           Support Hours: Monday-Friday, 9 AM - 6 PM GMT

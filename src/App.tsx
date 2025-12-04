@@ -31,6 +31,7 @@ const ReturnPolicy = React.lazy(() => import('./pages/ReturnPolicy'));
 const ShippingPolicy = React.lazy(() => import('./pages/ShippingPolicy'));
 const LazyAbout = React.lazy(() => import('./pages/About'));
 const LazyBlog = React.lazy(() => import('./pages/Blog'));
+const LazySubscription = React.lazy(() => import('./pages/Subscription'));
 
 function App() {
   // Регистрируем Service Worker для кэширования
@@ -111,6 +112,7 @@ function AppContent() {
                   <Route path="/refund-policy" element={<RefundPolicy />} />
                   <Route path="/return-policy" element={<ReturnPolicy />} />
                   <Route path="/shipping-policy" element={<ShippingPolicy />} />
+                  <Route path="/subscription" element={<LazySubscription />} />
                   <Route path="/about" element={<LazyAbout />} />
                   <Route path="/blog" element={<LazyBlog />} />
                 </Routes>

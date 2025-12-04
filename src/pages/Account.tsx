@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Container, Button } from '../styles/GlobalStyles';
 import { useAuth } from '../contexts/AuthContext';
+import { usePrice } from '../hooks/usePrice';
 import { products, getProductVideo, getProductVideos } from '../data/products';
 import {
   AccountWrapper,
@@ -38,6 +39,7 @@ import {
 
 const Account: React.FC = () => {
   const { user, logout } = useAuth();
+  const { formatPrice } = usePrice();
   const [activeTab, setActiveTab] = useState('profile');
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 968);
   const [showMobileMenu, setShowMobileMenu] = useState(false);
@@ -94,10 +96,14 @@ const Account: React.FC = () => {
       id: product.id,
       title: product.name,
       description: product.description,
-      price: `$${product.price}`,
+      price: formatPrice(product.price),
       videos: courseVideos
     };
   });
+
+  // Check if user is the test account from .env
+  const TEST_USER_EMAIL = process.env.REACT_APP_TEST_USER_EMAIL || 'test@test.com';
+  const isTestAccount = user?.email === TEST_USER_EMAIL;
 
   const renderProfileSection = () => (
     <div>
@@ -144,9 +150,7 @@ const Account: React.FC = () => {
   );
 
   const renderCoursesSection = () => {
-    // Показываем курсы только для тестового аккаунта
-    const isTestAccount = user?.email === 'test@test.com';
-    
+    // Show courses only for test account from .env
     if (!isTestAccount) {
       return (
         <div>

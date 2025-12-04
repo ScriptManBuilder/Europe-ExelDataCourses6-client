@@ -35,6 +35,7 @@ const Footer: React.FC = () => {
           <FooterSection>
             <h3>Help</h3>
             <ul>
+              <li><Link to="/subscription">Subscription Plans</Link></li>
               <li><Link to="/support">FAQ</Link></li>
               <li><Link to="/return-policy">Returns Policy</Link></li>
               <li><Link to="/refund-policy">Refund Policy</Link></li>

@@ -361,6 +361,9 @@ const Home: React.FC = () => {
               <Button as={Link} to="/products" variant="primary">
                 Browse Courses
               </Button>
+              <Button as={Link} to="/subscription" variant="outline">
+                View Plans
+              </Button>
               <Button as={Link} to="/about" variant="outline">
                 Our Mission
               </Button>
@@ -644,6 +647,132 @@ const Home: React.FC = () => {
           </ScrollingText>
         </ScrollingTextBanner>
       </PhotoGallerySection>
+
+      {/* Subscription Information Section */}
+      <InfoSection>
+        <InfoGrid>
+          <InfoBlock>
+            <InfoTitle>Subscription Plans & Terms</InfoTitle>
+            <InfoDescription>
+              Choose from flexible subscription options designed for every learning journey. 
+              All plans include full access to our comprehensive Excel Data Visualization training library.
+            </InfoDescription>
+            
+            <InfoSubsection>
+              <InfoSubtitle>Monthly Subscription</InfoSubtitle>
+              <InfoText>
+                <InfoHighlight>{formatPrice(29.99)}/month</InfoHighlight> - Billed monthly. 
+                Full access to all courses and updates. Cancel anytime with no long-term commitment. 
+                Perfect for those who want flexibility while learning at their own pace.
+              </InfoText>
+            </InfoSubsection>
+            
+            <InfoSubsection>
+              <InfoSubtitle>Annual Subscription</InfoSubtitle>
+              <InfoText>
+                <InfoHighlight>{formatPrice(69.99)}/year</InfoHighlight> - Billed annually. 
+                Save over 15% compared to monthly billing. Complete access to all current and future courses. 
+                Ideal for committed learners seeking the best value.
+              </InfoText>
+            </InfoSubsection>
+            
+            <InfoSubsection>
+              <InfoSubtitle>Lifetime Access</InfoSubtitle>
+              <InfoText>
+                <InfoHighlight>{formatPrice(129.99)} one-time payment</InfoHighlight> - Never pay again. 
+                Unlimited lifetime access to all courses, updates, and new content. 
+                The ultimate investment for serious Excel professionals.
+              </InfoText>
+            </InfoSubsection>
+          </InfoBlock>
+
+          <InfoBlock>
+            <InfoTitle>Billing & Payment Information</InfoTitle>
+            <InfoDescription>
+              Transparent billing with no hidden fees. All subscriptions are processed securely 
+              and you'll receive detailed invoices for every transaction.
+            </InfoDescription>
+            
+            <InfoSubsection>
+              <InfoSubtitle>Automatic Billing Cycle</InfoSubtitle>
+              <InfoText>
+                Your credit card will be billed <InfoHighlight>automatically on a monthly basis</InfoHighlight> unless 
+                your membership is cancelled. Monthly subscriptions renew on the same day each month. 
+                Annual subscriptions renew yearly on your original purchase date.
+              </InfoText>
+            </InfoSubsection>
+            
+            <InfoSubsection>
+              <InfoSubtitle>Cancellation Policy</InfoSubtitle>
+              <InfoText>
+                You can cancel your subscription at any time through your account settings. 
+                <InfoHighlight>Cancel at least 24 hours before your next billing date</InfoHighlight> to avoid 
+                the next charge. After cancellation, you'll retain access until the end of your current billing period.
+              </InfoText>
+            </InfoSubsection>
+          </InfoBlock>
+
+          <InfoBlock>
+            <InfoTitle>Contact & Support</InfoTitle>
+            <InfoDescription>
+              Our dedicated support team is here to help with any questions about subscriptions, 
+              billing, or course access.
+            </InfoDescription>
+            
+            <InfoSubsection>
+              <InfoSubtitle>Customer Service</InfoSubtitle>
+              <InfoText>
+                Email: <InfoHighlight style={{ fontWeight: 400 }}>support@photoshop-ecourses.com</InfoHighlight><br />
+                Phone: <InfoHighlight>+1 (229) 530-2424</InfoHighlight><br />
+                Hours: Monday-Friday, 9am-6pm CST
+              </InfoText>
+              <InfoText style={{ marginTop: '0.5rem' }}>
+                Response time: Within 30 days of your inquiry. For billing questions or refund requests, 
+                please contact our customer service team during business hours.
+              </InfoText>
+            </InfoSubsection>
+            
+            <InfoSubsection>
+              <InfoSubtitle>Billing Inquiries</InfoSubtitle>
+              <InfoText>
+                All charges will appear as <InfoHighlight>PHOTOSHOP.ECOURSES</InfoHighlight> on your credit card statement. 
+                Course access is provided immediately after successful payment. For any billing disputes or questions, 
+                contact us at the email above.
+              </InfoText>
+            </InfoSubsection>
+          </InfoBlock>
+
+          <InfoBlock>
+            <InfoTitle>Important Terms</InfoTitle>
+            <InfoDescription>
+              Please review these key terms before subscribing to ensure you fully understand 
+              the billing cycle, cancellation policy, and access terms.
+            </InfoDescription>
+            
+            <InfoSubsection>
+              <InfoSubtitle>Payment Agreement</InfoSubtitle>
+              <InfoText>
+                By subscribing, you agree to pay the total amount displayed at checkout. 
+                Subscriptions auto-renew unless cancelled. All payments are processed securely 
+                through our payment provider. You'll receive a confirmation email with payment details.
+              </InfoText>
+            </InfoSubsection>
+            
+            <InfoSubsection>
+              <InfoSubtitle>Refund Guidelines</InfoSubtitle>
+              <InfoText>
+                To request a refund, contact customer service at <InfoHighlight style={{ fontWeight: 400 }}>support@photoshop-ecourses.com</InfoHighlight> within 
+                30 days of purchase. Please visit our <InfoHighlight>Refund Policy</InfoHighlight> page for detailed 
+                guidelines on refunds including eligibility requirements and processing timeframes.
+              </InfoText>
+              <InfoText style={{ marginTop: '1rem' }}>
+                For complete subscription details, billing information, and cancellation policy, 
+                visit our <Link to="/subscription" style={{ color: 'var(--primary-color)', fontWeight: 600, textDecoration: 'underline' }}>Subscription Plans</Link> page.
+              </InfoText>
+            </InfoSubsection>
+          </InfoBlock>
+        </InfoGrid>
+      </InfoSection>
 
       {/* Information Section */}
       <InfoSection>

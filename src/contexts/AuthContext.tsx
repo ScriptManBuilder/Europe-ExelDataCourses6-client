@@ -1,5 +1,4 @@
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
-import { authAPI, User as ApiUser, SignupData, SigninData } from '../services/api';
 
 interface User {
   id: string;
@@ -21,13 +20,16 @@ interface AuthContextType {
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
-// Преобразование пользователя из API в формат приложения
-const transformApiUser = (apiUser: ApiUser): User => ({
-  id: apiUser.id.toString(),
-  email: apiUser.email,
-  firstName: apiUser.firstName || '',
-  lastName: apiUser.lastName || ''
-});
+// Static test user credentials from .env
+const TEST_USER = {
+  email: process.env.REACT_APP_TEST_USER_EMAIL || 'test@test.com',
+  password: process.env.REACT_APP_TEST_USER_PASSWORD || '12345',
+  firstName: process.env.REACT_APP_TEST_USER_FIRSTNAME || 'Test',
+  lastName: process.env.REACT_APP_TEST_USER_LASTNAME || 'User'
+};
+
+// Local storage keys
+const USER_STORAGE_KEY = 'auth_user';
 
 export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const [user, setUser] = useState<User | null>(null);
@@ -35,28 +37,19 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    const initAuth = async () => {
+    // Check if user is stored in localStorage on mount
+    const initAuth = () => {
       setLoading(true);
-      setError(null);
       
       try {
-        if (authAPI.isAuthenticated()) {
-          const profileData = await authAPI.getProfile();
-          const transformedUser = transformApiUser(profileData.user);
-          setUser(transformedUser);
+        const storedUser = localStorage.getItem(USER_STORAGE_KEY);
+        if (storedUser) {
+          const parsedUser = JSON.parse(storedUser);
+          setUser(parsedUser);
         }
       } catch (err) {
-        
-        // Проверяем тип ошибки для лучшей обработки
-        if (err instanceof Error && err.message.includes('Failed to fetch')) {
-          setError('Backend connection failed. Some features may be limited.');
-        } else {
-          setError('Authentication failed');
-        }
-        
-        // Если токен невалиден, очищаем его
-        authAPI.signout();
-        setUser(null);
+        console.error('Failed to load user from storage:', err);
+        localStorage.removeItem(USER_STORAGE_KEY);
       } finally {
         setLoading(false);
       }
@@ -69,15 +62,28 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
     setLoading(true);
     setError(null);
     
+    // Simulate API delay
+    await new Promise(resolve => setTimeout(resolve, 500));
+    
     try {
-      const credentials: SigninData = { email, password };
-      const response = await authAPI.signin(credentials);
-      
-      const transformedUser = transformApiUser(response.user);
-      
-      setUser(transformedUser);
-      setLoading(false);
-      return true;
+      // Check against test user credentials
+      if (email === TEST_USER.email && password === TEST_USER.password) {
+        const loggedInUser: User = {
+          id: '1',
+          email: TEST_USER.email,
+          firstName: TEST_USER.firstName,
+          lastName: TEST_USER.lastName
+        };
+        
+        setUser(loggedInUser);
+        localStorage.setItem(USER_STORAGE_KEY, JSON.stringify(loggedInUser));
+        setLoading(false);
+        return true;
+      } else {
+        setError('Invalid email or password');
+        setLoading(false);
+        return false;
+      }
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Login failed');
       setLoading(false);
@@ -89,20 +95,28 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
     setLoading(true);
     setError(null);
     
+    // Simulate API delay
+    await new Promise(resolve => setTimeout(resolve, 500));
+    
     try {
-      const signupData: SignupData = {
-        email: userData.email,
-        password: userData.password,
-        firstName: userData.firstName,
-        lastName: userData.lastName
-      };
-      
-      const response = await authAPI.signup(signupData);
-      const transformedUser = transformApiUser(response.user);
-      
-      setUser(transformedUser);
-      setLoading(false);
-      return true;
+      // Only allow registration with test email for demo purposes
+      if (userData.email === TEST_USER.email) {
+        const registeredUser: User = {
+          id: '1',
+          email: userData.email,
+          firstName: userData.firstName,
+          lastName: userData.lastName
+        };
+        
+        setUser(registeredUser);
+        localStorage.setItem(USER_STORAGE_KEY, JSON.stringify(registeredUser));
+        setLoading(false);
+        return true;
+      } else {
+        setError('Registration is currently limited to demo account only');
+        setLoading(false);
+        return false;
+      }
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Registration failed');
       setLoading(false);
@@ -111,7 +125,7 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
   };
 
   const logout = () => {
-    authAPI.signout();
+    localStorage.removeItem(USER_STORAGE_KEY);
     setUser(null);
     setError(null);
   };
