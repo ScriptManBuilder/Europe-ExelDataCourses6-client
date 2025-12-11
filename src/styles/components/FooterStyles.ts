@@ -189,3 +189,41 @@ export const Copyright = styled.p`
     font-size: 0.85rem;
   }
 `;
+
+export const PaymentLogos = styled.div`
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+  
+  img {
+    height: 35px;
+    width: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
+    transition: transform 0.2s ease;
+    
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    gap: 1rem;
+    margin-top: 1.25rem;
+    
+    img {
+      height: 28px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    gap: 0.75rem;
+    
+    img {
+      height: 25px;
+    }
+  }
+`;
